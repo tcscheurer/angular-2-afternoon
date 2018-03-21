@@ -1,0 +1,13 @@
+<section class="packages-main">
+  <section ng-repeat="p in packages" class="package-card" >
+    <img ng-src="{{p.image}}" alt="{{p.country}}" />
+
+    <h6> {{p.city}} </h6>
+    <h1> {{p.country}} </h1>
+    <p> {{p.desc}} </p>
+    <h3>$ {{p.price}} </h3>
+
+    <!--This button needs a ui-sref that points to booked-->
+    <button ui-sref="booked({ id: '{{p.id}}' })">Book Now</button>
+  </section>
+</section>
